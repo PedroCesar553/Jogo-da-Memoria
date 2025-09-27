@@ -1,30 +1,32 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Jogo da Memória</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Jogo da Memória Acessível</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header>
-    <h1>🧠 Jogo da Memória</h1>
+    <h1>🧠 Jogo da Memória Acessível</h1>
     <div class="controls">
       <label for="difficulty">Dificuldade:</label>
-      <select id="difficulty">
+      <select id="difficulty" aria-label="Escolher dificuldade">
         <option value="6">Fácil (6 pares)</option>
         <option value="8">Médio (8 pares)</option>
         <option value="12">Difícil (12 pares)</option>
       </select>
 
       <label for="mode">Modo:</label>
-      <select id="mode">
+      <select id="mode" aria-label="Escolher modo de jogo">
         <option value="solo">Solo</option>
         <option value="multi">Multijogador</option>
       </select>
 
       <button id="startBtn">Iniciar Jogo</button>
+      <button id="contrastToggle">Alto Contraste</button>
     </div>
+
     <div class="status">
       <p id="timer">⏱️ 00:00</p>
       <p id="moves">Movimentos: 0</p>
@@ -34,11 +36,12 @@
   </header>
 
   <main>
-    <section id="game-board" class="board"></section>
+    <section id="game-board" class="board" role="region" aria-label="Tabuleiro do jogo"></section>
   </main>
 
   <footer>
-    <p>Jogo da Memória em HTML, CSS e JS • Desenvolvido em equipe</p>
+    <p>Pressione <strong>Alt + L</strong> para ativar o modo leitura falada.</p>
+    <p>Desenvolvido com foco em acessibilidade.</p>
   </footer>
 
   <script src="script.js"></script>
