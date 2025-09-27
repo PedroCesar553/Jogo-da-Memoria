@@ -1,15 +1,33 @@
+<!-- 
+  index.html
+  --------------------------
+  Este é o arquivo principal do Jogo da Memória.
+  Ele define a estrutura da página, incluindo cabeçalho, controles e o tabuleiro do jogo.
+  
+  Funcionalidades:
+  - Seleção de dificuldade (quantidade de pares de cartas).
+  - Seleção de modo de jogo (solo ou multijogador).
+  - Botões para iniciar o jogo e alternar contraste.
+  - Exibição de informações do jogo: tempo, movimentos, pontuação e vez do jogador.
+  - Área do tabuleiro (#game-board) onde as cartas serão exibidas dinamicamente via JavaScript.
+-->
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Jogo da Memória Feio</title>
+  <title>Jogo da Memória</title>
+  <!-- Vincula o arquivo CSS para o estilo da página -->
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <!-- Título do jogo -->
   <h1>Jogo da Memória</h1>
 
+  <!-- Controles do jogo -->
   <div>
+    <!-- Seleção da dificuldade -->
     <label for="difficulty">Dificuldade:</label>
     <select id="difficulty">
       <option value="6">Fácil</option>
@@ -17,25 +35,31 @@
       <option value="12">Difícil</option>
     </select>
 
+    <!-- Seleção do modo de jogo -->
     <label for="mode">Modo:</label>
     <select id="mode">
       <option value="solo">Solo</option>
       <option value="multi">Multijogador</option>
     </select>
 
+    <!-- Botões de ação -->
     <button id="startBtn">Iniciar</button>
     <button id="contrastToggle">Contraste</button>
   </div>
 
+  <!-- Informações do jogo -->
   <div>
-    <p id="timer">00:00</p>
-    <p id="moves">Movimentos: 0</p>
-    <p id="score">Pontuação: 0</p>
-    <p id="turn"></p>
+    <p id="timer">00:00</p> <!-- Cronômetro do jogo -->
+    <p id="moves">Movimentos: 0</p> <!-- Contagem de movimentos do jogador -->
+    <p id="score">Pontuação: 0</p> <!-- Pontuação acumulada -->
+    <p id="turn"></p> <!-- Exibe a vez do jogador (no modo multijogador) -->
   </div>
 
+  <!-- Tabuleiro do jogo -->
   <div id="game-board"></div>
+  <!-- O conteúdo das cartas será gerado dinamicamente via JavaScript -->
 
+  <!-- Vincula o arquivo JavaScript que contém a lógica do jogo -->
   <script src="script.js"></script>
 </body>
 </html>

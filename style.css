@@ -1,55 +1,71 @@
+/*
+  style.css
+  --------------------------
+  Este arquivo contém o estilo visual do Jogo da Memória.
+  Define cores, fontes, layout do tabuleiro, aparência das cartas
+  e suporte a contraste alto para acessibilidade.
+*/
+
+/* Estilo base do corpo da página */
 body {
-  font-family: Arial, sans-serif;
-  background-color: rgb(255, 255, 255); /* feio e berrante */
-  color: rgb(0, 0, 0);
-  text-align: center;
+  font-family: Arial, sans-serif;  /* Fonte legível e comum */
+  background-color: rgb(255, 255, 255); /* Cor de fundo padrão (branco) */
+  color: rgb(0, 0, 0);                 /* Cor do texto (preto) */
+  text-align: center;                  /* Centraliza todos os elementos */
 }
 
+/* Estilo do título principal */
 h1 {
-  color: rgb(255, 0, 0);
-  font-size: 40px;
+  color: rgb(255, 0, 0);  /* Cor vermelha intensa */
+  font-size: 40px;         /* Tamanho grande para destaque */
 }
 
+/* Espaçamento entre blocos, selects e botões */
 div, select, button {
-  margin: 5px;
+  margin: 5px; /* Pequeno espaço entre elementos */
 }
 
+/* Estilo dos botões */
 button {
-  background-color: rgb(255, 255, 255);
-  color: rgb(0, 0, 0);
-  border: 3px solid rgb(217, 255, 0);
-  cursor: pointer;
+  background-color: rgb(255, 255, 255); /* Fundo branco */
+  color: rgb(0, 0, 0);                  /* Texto preto */
+  border: 3px solid rgb(217, 255, 0);   /* Borda amarela chamativa */
+  cursor: pointer;                      /* Cursor muda ao passar por cima */
 }
 
+/* Tabuleiro do jogo */
 #game-board {
-  display: grid;
-  gap: 5px;
-  margin: 10px auto;
-  max-width: 500px;
+  display: grid;        /* Layout em grid para cartas */
+  gap: 5px;             /* Espaçamento entre cartas */
+  margin: 10px auto;    /* Centraliza o tabuleiro horizontalmente */
+  max-width: 500px;     /* Largura máxima para caber na tela */
 }
 
+/* Estilo das cartas */
 .card {
-  width: 80px;
-  height: 80px;
-  background-color: rgb(255, 255, 255);
-  color: black;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 2rem;
-  border: 5px solid rgb(242, 255, 0);
+  width: 80px;                 /* Largura fixa */
+  height: 80px;                /* Altura fixa */
+  background-color: rgb(255, 255, 255); /* Fundo branco */
+  color: black;                /* Texto preto */
+  display: flex;               /* Flexbox para centralizar conteúdo */
+  align-items: center;         /* Alinha verticalmente ao centro */
+  justify-content: center;     /* Alinha horizontalmente ao centro */
+  font-size: 2rem;             /* Tamanho grande do emoji */
+  border: 5px solid rgb(242, 255, 0); /* Borda amarela */
 }
 
+/* Carta virada */
 .card.flipped {
-  background-color: rgb(238, 230, 216);
+  background-color: rgb(238, 230, 216); /* Fundo diferente quando virada */
 }
 
+/* Estilo para modo de alto contraste (acessibilidade) */
 body.high-contrast {
-  background-color: black;
-  color: white;
+  background-color: black; /* Fundo escuro */
+  color: white;            /* Texto branco */
 }
 
 body.high-contrast .card {
-  background-color: white;
-  color: black;
+  background-color: white; /* Fundo da carta branco */
+  color: black;            /* Emoji em preto */
 }
