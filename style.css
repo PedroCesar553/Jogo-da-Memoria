@@ -1,0 +1,90 @@
+/* Reset simples */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background: linear-gradient(135deg, #74ebd5, #acb6e5);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.8);
+  border-bottom: 2px solid #ccc;
+}
+
+h1 {
+  margin-bottom: 10px;
+}
+
+.controls {
+  margin: 10px 0;
+}
+
+.controls select,
+.controls button {
+  margin: 0 5px;
+  padding: 5px 10px;
+  font-size: 1rem;
+}
+
+.status {
+  margin-top: 10px;
+}
+
+main {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.board {
+  display: grid;
+  gap: 10px;
+  justify-content: center;
+}
+
+.card {
+  width: 80px;
+  height: 100px;
+  background: #ffffff;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+  transform: scale(1);
+  transition: transform 0.3s;
+}
+
+.card.flipped {
+  background: #f0f0f0;
+  cursor: default;
+}
+
+.card.matched {
+  background: #90ee90;
+  cursor: default;
+}
+
+.card:active {
+  transform: scale(0.95);
+}
+
+footer {
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.7);
+  border-top: 2px solid #ccc;
+  font-size: 0.9rem;
+}
