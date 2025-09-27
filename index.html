@@ -1,48 +1,40 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Jogo da Memória Acessível</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jogo da Memória Feio</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <h1>🧠 Jogo da Memória Acessível</h1>
-    <div class="controls">
-      <label for="difficulty">Dificuldade:</label>
-      <select id="difficulty" aria-label="Escolher dificuldade">
-        <option value="6">Fácil (6 pares)</option>
-        <option value="8">Médio (8 pares)</option>
-        <option value="12">Difícil (12 pares)</option>
-      </select>
+  <h1>Jogo da Memória</h1>
 
-      <label for="mode">Modo:</label>
-      <select id="mode" aria-label="Escolher modo de jogo">
-        <option value="solo">Solo</option>
-        <option value="multi">Multijogador</option>
-      </select>
+  <div>
+    <label for="difficulty">Dificuldade:</label>
+    <select id="difficulty">
+      <option value="6">Fácil</option>
+      <option value="8">Médio</option>
+      <option value="12">Difícil</option>
+    </select>
 
-      <button id="startBtn">Iniciar Jogo</button>
-      <button id="contrastToggle">Alto Contraste</button>
-    </div>
+    <label for="mode">Modo:</label>
+    <select id="mode">
+      <option value="solo">Solo</option>
+      <option value="multi">Multijogador</option>
+    </select>
 
-    <div class="status">
-      <p id="timer">⏱️ 00:00</p>
-      <p id="moves">Movimentos: 0</p>
-      <p id="score">Pontuação: 0</p>
-      <p id="turn"></p>
-    </div>
-  </header>
+    <button id="startBtn">Iniciar</button>
+    <button id="contrastToggle">Contraste</button>
+  </div>
 
-  <main>
-    <section id="game-board" class="board" role="region" aria-label="Tabuleiro do jogo"></section>
-  </main>
+  <div>
+    <p id="timer">00:00</p>
+    <p id="moves">Movimentos: 0</p>
+    <p id="score">Pontuação: 0</p>
+    <p id="turn"></p>
+  </div>
 
-  <footer>
-    <p>Pressione <strong>Alt + L</strong> para ativar o modo leitura falada.</p>
-    <p>Desenvolvido com foco em acessibilidade.</p>
-  </footer>
+  <div id="game-board"></div>
 
   <script src="script.js"></script>
 </body>

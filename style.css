@@ -1,169 +1,55 @@
-/* Reset */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 body {
-  font-family: 'Segoe UI', sans-serif;
-  background-color: #f5f7fa;
-  color: #222;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  transition: all 0.3s ease;
-}
-
-body.high-contrast {
-  background-color: #121212;
-  color: #ffffff;
-}
-
-header {
+  font-family: Arial, sans-serif;
+  background-color: rgb(255, 255, 255); /* feio e berrante */
+  color: rgb(0, 0, 0);
   text-align: center;
-  padding: 20px;
-  background-color: #ffffff;
-  border-bottom: 1px solid #ccc;
-  transition: background-color 0.3s, color 0.3s;
 }
 
-body.high-contrast header {
-  background-color: #1e1e1e;
-  color: #ffffff;
+h1 {
+  color: rgb(255, 0, 0);
+  font-size: 40px;
 }
 
-.controls {
-  margin-top: 10px;
-}
-
-.controls select,
-.controls button {
+div, select, button {
   margin: 5px;
-  padding: 8px 16px;
-  font-size: 1rem;
-  border-radius: 6px;
-  border: 1px solid #ccc;
-  background-color: #f0f0f0;
+}
+
+button {
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  border: 3px solid rgb(217, 255, 0);
   cursor: pointer;
-  transition: background 0.3s, color 0.3s, border-color 0.3s;
 }
 
-.controls button:hover {
-  background-color: #ddd;
-}
-
-body.high-contrast .controls select,
-body.high-contrast .controls button {
-  background-color: #2c2c2c;
-  color: #ffffff;
-  border: 2px solid #4caf50; /* Verde forte para destaque */
-}
-
-.status {
-  margin-top: 15px;
-  font-weight: 500;
-}
-
-main {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 20px;
-}
-
-.board {
+#game-board {
   display: grid;
-  gap: 16px;
-  justify-content: center;
-  width: 100%;
-  max-width: 800px;
+  gap: 5px;
+  margin: 10px auto;
+  max-width: 500px;
 }
 
 .card {
-  width: 90px;
-  height: 110px;
-  perspective: 1000px;
-  cursor: pointer;
-}
-
-.card-inner {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  transition: transform 0.6s;
-  transform-style: preserve-3d;
-  border-radius: 12px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
-}
-
-.card.flipped .card-inner {
-  transform: rotateY(180deg);
-}
-
-.card-front, .card-back {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  backface-visibility: hidden;
-  border-radius: 12px;
+  width: 80px;
+  height: 80px;
+  background-color: rgb(255, 255, 255);
+  color: black;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 2.5rem;
-  font-weight: bold;
-  transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-  user-select: none;
+  font-size: 2rem;
+  border: 5px solid rgb(242, 255, 0);
 }
 
-.card-front {
-  background: #e0e0e0;
-  color: #333333;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+.card.flipped {
+  background-color: rgb(238, 230, 216);
 }
 
-.card-back {
-  background: #007bff;
+body.high-contrast {
+  background-color: black;
   color: white;
-  transform: rotateY(180deg);
-  box-shadow: 0 4px 10px rgba(0,123,255,0.6);
 }
 
-.card.matched .card-inner {
-  opacity: 0.5;
-  pointer-events: none;
-  box-shadow: none;
-}
-
-footer {
-  text-align: center;
-  padding: 15px;
-  background-color: #f1f1f1;
-  font-size: 0.9rem;
-  border-top: 1px solid #ccc;
-  transition: background-color 0.3s, color 0.3s;
-}
-
-body.high-contrast footer {
-  background-color: #1e1e1e;
-  color: #cfcfcf;
-  border-top: 1px solid #4caf50;
-}
-
-/* ALTO CONTRASTE - modo escuro */
-
-body.high-contrast .card-front {
-  background-color: #d1d1d1;
-  color: #000000;
-  box-shadow: 0 0 8px 2px #4caf50;
-  border: 2px solid #4caf50;
-}
-
-body.high-contrast .card-back {
-  background-color: #121212;
-  color: #4caf50;
-  box-shadow: 0 0 8px 3px #4caf50;
-  border: 2px solid #4caf50;
+body.high-contrast .card {
+  background-color: white;
+  color: black;
 }
